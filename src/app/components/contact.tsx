@@ -50,6 +50,17 @@ export default function Contact(){
                                 />
                                 </div>
                                 <div>
+                                <label className="block font-medium mb-1">Choose Car Type</label>
+                                <select className="w-full border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                    <option value="">Hachbac</option>
+                                    <option value="">Coupe</option>
+                                    <option value="">Sedan</option>
+                                    <option value="">SUV</option>
+                                    <option value="">Van</option>
+                                
+                                </select>
+                                </div>
+                                <div>
                                 <label className="block font-medium mb-1">Choose Sevices</label>
                                 <select className="w-full border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500">
                                     <option value="">Basic Wash</option>
