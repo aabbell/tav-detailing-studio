@@ -5,6 +5,7 @@ import Contact from "./components/contact";
 import Footer from "./components/footer"
 import Prices from "./components/prices";
 export default function Home() {
+  console.log(process.env.NEXT_PUBLIC_supabaseUrl)
   return(
     <div>
       <Navbar></Navbar>
