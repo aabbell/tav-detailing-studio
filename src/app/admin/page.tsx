@@ -8,9 +8,22 @@ export default async function Page() {
     if (error){
         return <p>Error loading customers</p>
     }
+
+    const now = new Date()
+    
+    const upcomingSchedule = customers.filter((c) => {
+        const scheduleDateTime = new Date(`${c.date}T${c.time}`)
+        return scheduleDateTime >= now
+    })
+
+    const pastSchedule = customers.filter((c) => {
+        const scheduleDateTime = new Date(`${c.date}T${c.time}`)
+        return scheduleDateTime < now
+    })
   return (
     <div className='p-8'>
         <h1 className='text-2xl font-bold mb-6'>Customers</h1>
+        <h2 className='text-xl font-semibold mb-4'>Upcoming Schedules</h2>
         <table className='w-full border'>
             <thead>
                 <tr className='bg-gray-50'>
@@ -19,10 +32,12 @@ export default async function Page() {
                     <th className='border p-2'>Car Type</th>
                     <th className='border p-2'>Service</th>
                     <th className='border p-2'>Created</th>
+                    <th className='border p-2'>Date</th>
+                    <th className='border p-2'>Time</th>
                 </tr>
             </thead>
             <tbody>
-                {customers.map((c)=> (
+                {upcomingSchedule.map((c)=> (
                     <tr key={c.id}>
                         <td className='border p-2'>{c.name}</td>
                         <td className='border p-2'>{c.phone}</td>
@@ -31,6 +46,8 @@ export default async function Page() {
                         <td className='border p-2'>
                             {new Date(c.created_at).toLocaleString()}
                         </td>
+                        <td className='border p-2'>{c.date}</td>
+                        <td className='border p-2'>{c.time}</td>
                     </tr>
                 ))}
             </tbody>

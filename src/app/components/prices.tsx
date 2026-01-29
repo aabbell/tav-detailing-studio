@@ -63,7 +63,11 @@ export default function Prices(){
                 SUV: "80min",
                 Van: "85min"
             },
-            features: ["Complete interior detail", "Exterior wash & wax", "Engine bay cleaning", "Leather conditioning", "Dust coating"]
+            features: ["Complete interior detail", 
+                "Exterior wash & wax", 
+                "Engine bay cleaning", 
+                "Leather conditioning", 
+                "Dust coating"]
         },
         {
             name: "Interior Wash",
@@ -81,7 +85,9 @@ export default function Prices(){
                 SUV: "50min",
                 Van: "55min"
             },
-            features: ["Complete interior detail", "Leather conditioning", "Dust coating"]
+            features: ["Complete interior detail",
+                 "Leather conditioning", 
+                 "Dust coating"]
         }
     ]
     
