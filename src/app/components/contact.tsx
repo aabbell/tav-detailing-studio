@@ -4,14 +4,23 @@ import { supabase } from "../lib/supabase"
 
 
 export default function Contact(){
-    const [formData, setFormData] = useState({
-        name: "",
-        phone: "",
-        car:"",
-        services:"",
-        time:"",
-        date:"",
-    })
+   type FormData = {
+  name: string
+  phone: string
+  car: string
+  services: string
+  time: string
+  date: string
+}
+
+const [formData, setFormData] = useState<FormData>({
+  name: "",
+  phone: "",
+  car:"",
+  services:"",
+  time:"",
+  date:"",
+})
     const [errors, setErrors] = useState<{
         name?:string;
         phone?: string;
@@ -22,7 +31,16 @@ export default function Contact(){
         general?:string
     }>({})
     const [show, setShow] = useState(false)
-    const [appointment, setAppointment] = useState<any[]>([])
+    type Appointment = {
+        name: string
+        phone: string
+        car: string
+        services: string
+        date: string
+        time: string
+    }
+
+    const [appointment, setAppointment] = useState<Appointment[]>([])
 
 
     async function fetchAppointment(name: string, phone: string) {
@@ -131,7 +149,7 @@ export default function Contact(){
                 <div className="grid md:grid-cols-2">
                     <div className="bg-gradient-to-br from-blue-600 to-blue-800 text-white p-10 flex flex-col justify-between">
                         <div>
-                            <h2 className="text-3x1 font-semibold mb-4">Let's Get in Touch</h2>
+                            <h2 className="text-3x1 font-semibold mb-4">Let&apos;s Get in Touch</h2>
                             <p className="text-blue-100 mb-6">
                                 Need to get in touch with us? Fill out the form with your inquiry.
                             </p>
