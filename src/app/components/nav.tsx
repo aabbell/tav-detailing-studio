@@ -14,10 +14,10 @@ export default function Navbar(){
                     </div>
                     {/* Destop Menu */}
                     <div className="hidden md:flex space-x-6">
-                        <Link href="/" className="hover:text-blue-500">Home</Link>
-                        <Link href="/about" className="hover:text-blue-500">About</Link>
-                        <Link href="/services" className="hover:text-blue-500">Services</Link>
-                        <Link href="contact" className="hover:text-blue-500">Contact</Link>
+                        <Link href="#About" className="hover:text-blue-500">About</Link>
+                        <Link href="#Services" className="hover:text-blue-500">Services</Link>
+                        <Link href="#Prices" className="hover:text-blue-500">Prices</Link>
+                        <Link href="#Contact" className="hover:text-blue-500">Contact</Link>
                     </div>
 
                     {/* mobile Menu Button */}

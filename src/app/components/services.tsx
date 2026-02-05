@@ -17,7 +17,7 @@ export default function Services(){
                 alt="01 Image"
                 width={600}
                 height={400}
-                className="object-cover w-full h-60  transition"
+                className="object-cover w-full h-60 group-hover:scale-105 transition"
                 />
                 <div className="absolute inset-0 bg-black/30"></div>
                 <div className="absolute bottom-4 left-4 text-white">

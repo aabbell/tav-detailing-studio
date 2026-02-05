@@ -166,6 +166,19 @@ const [formData, setFormData] = useState<FormData>({
                                 <h3 className="font-semibold">Support Contact</h3>
                                 <p className="text-blue-100">email</p>
                             </div>
+                            <div className="map-container w-full h-64 rounded-lg mb-10 overflow-hidden">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1969.9943396850306!2d38.71926225950677!3d9.064794998752228!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b85d010817fa5%3A0x3d00a8c553c147dd!2sTav%20Detailing!5e0!3m2!1sen!2set!4v1770294225874!5m2!1sen!2set"
+                            width="100%"
+                            height="100%"
+                            style={{ border: 0 }}
+                            allowFullScreen
+                            loading="lazy"
+                            referrerPolicy="no-referrer-when-downgrade"
+                            className="mb-3"
+                        >   
+                        </iframe>
+                        </div>
                         </div>
                         </div>
                         <div>

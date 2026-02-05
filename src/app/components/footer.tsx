@@ -1,3 +1,4 @@
+import Link from "next/link";
 export default function Footer() {
   return (
     <footer className="bg-[#0f172a] text-gray-300 py-14">
@@ -15,10 +16,10 @@ export default function Footer() {
         <div>
           <h3 className="text-white text-lg font-semibold mb-3">Services</h3>
           <ul className="space-y-2">
-            <li className="hover:text-blue-400 cursor-pointer">Basic Wash</li>
-            <li className="hover:text-blue-400 cursor-pointer">Premium Wash</li>
-            <li className="hover:text-blue-400 cursor-pointer">Deluxe Wash</li>
-            <li className="hover:text-blue-400 cursor-pointer">Monthly Plans</li>
+            <li className="hover:text-blue-400">Basic Wash</li>
+            <li className="hover:text-blue-400">Premium Wash</li>
+            <li className="hover:text-blue-400">Deluxe Wash</li>
+            <li className="hover:text-blue-400">Monthly Plans</li>
           </ul>
         </div>
 
@@ -26,9 +27,11 @@ export default function Footer() {
         <div>
           <h3 className="text-white text-lg font-semibold mb-3">Company</h3>
           <ul className="space-y-2">
-            <li className="hover:text-blue-400 cursor-pointer">About Us</li>
-            <li className="hover:text-blue-400 cursor-pointer">Services</li>
-            <li className="hover:text-blue-400 cursor-pointer">Contact</li>
+            <li><Link href="#About" className="hover:text-blue-400 cursor-pointer">About Us</Link></li>
+            <li><Link href="#Services" className="hover:text-blue-400 cursor-pointer">Services</Link></li>
+            <li><Link href="#Prices" className="hover:text-blue-400 cursor-pointer">Our Price</Link></li>
+            <li><Link href="#Contact" className="hover:text-blue-400 cursor-pointer">Contact</Link></li>
+           
           </ul>
         </div>
 

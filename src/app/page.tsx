@@ -1,4 +1,4 @@
-import Header from "./components/header";
+import About from "./components/About";
 import Navbar from "./components/nav";
 import Services from "./components/services";
 import Contact from "./components/contact";
@@ -8,12 +8,24 @@ export default function Home() {
   console.log(process.env.NEXT_PUBLIC_supabaseUrl)
   return(
     <div>
-      <Navbar></Navbar>
-      <Header></Header>
-      <Services></Services>
-      <Prices></Prices>
-      <Contact></Contact>
-      <Footer></Footer>
+      <div id="Navbar">
+        <Navbar></Navbar>
+      </div>
+      <div id="About">
+        <About></About>
+      </div>
+      <div id="Services">
+        <Services></Services>
+      </div>
+      <div id="Prices">
+        <Prices></Prices>
+      </div>
+      <div id="Contact">
+       <Contact></Contact>
+      </div>
+      <div id="Footer">
+       <Footer></Footer>
+      </div>
     </div>
 
   )
