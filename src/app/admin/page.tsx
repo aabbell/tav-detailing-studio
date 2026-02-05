@@ -23,9 +23,10 @@ export default async function Page() {
   return (
     <div className='p-8'>
         <h1 className='text-2xl font-bold mb-6'>Customers</h1>
-        <h2 className='text-xl font-semibold mb-4'>Upcoming Schedules</h2>
-        <table className='w-full border'>
-            <thead>
+        <div>
+            <h2 className='text-xl font-semibold mb-4'>Upcoming Schedules</h2>
+                <table className='w-full border'>
+                    <thead>
                 <tr className='bg-gray-50'>
                     <th className='border p-2'>Name</th>
                     <th className='border p-2'>Phone</th>
@@ -52,7 +53,38 @@ export default async function Page() {
                 ))}
             </tbody>
         </table>
-
+        </div>
+        <div className='mt-8'>
+        <h2 className='text-xl font-semibold mb-4'>Passed Schedules</h2>
+        <table className='w-full border'>
+            <thead>
+                <tr className='bg-gray-50'>
+                    <th className='border p-2'>Name</th>
+                    <th className='border p-2'>Phone</th>
+                    <th className='border p-2'>Car Type</th>
+                    <th className='border p-2'>Service</th>
+                    <th className='border p-2'>Created</th>
+                    <th className='border p-2'>Date</th>
+                    <th className='border p-2'>Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                {pastSchedule.map((c)=> (
+                    <tr key={c.id}>
+                        <td className='border p-2'>{c.name}</td>
+                        <td className='border p-2'>{c.phone}</td>
+                        <td className='border p-2'>{c.car}</td>
+                        <td className='border p-2'>{c.services}</td>
+                        <td className='border p-2'>
+                            {new Date(c.created_at).toLocaleString()}
+                        </td>
+                        <td className='border p-2'>{c.date}</td>
+                        <td className='border p-2'>{c.time}</td>
+                    </tr>
+                ))}
+            </tbody>
+        </table>
+        </div>
     </div>
   )
 }

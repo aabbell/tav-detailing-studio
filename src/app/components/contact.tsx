@@ -121,6 +121,7 @@ export default function Contact(){
         else{
             setFormData({name:"", phone:"", car:"", services:"", time:"",date:""})
         }
+        
     }
   
 
@@ -325,7 +326,7 @@ export default function Contact(){
                                                 <p>Car:{item.car}</p>
                                                 <p>Service:{item.services}</p>
                                                 <p>Date:{item.date}</p>
-                                                <p>time:{item.time}</p>
+                                                <p>Address: Shegole in Front of Anbessa Garage</p>
                                             </div>
                                         ))}
                                         <button
