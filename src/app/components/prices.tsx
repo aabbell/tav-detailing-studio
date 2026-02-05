@@ -27,7 +27,7 @@ export default function Prices(){
                 SUV: "45min",
                 Van: "50min"
             },
-            features: ["Exterior wash", "Tire cleaning", "Quick dry"]
+            features: ["Exterior Wash & Dry", "Windows (Inside & Out)", "Interior Vacuum"]
         },
         {
             name: "Premium Wash",
@@ -45,10 +45,10 @@ export default function Prices(){
                 SUV: "60min",
                 Van: "65min"
             },
-            features: ["Interior & exterior", "Vacuum cleaning", "Dashboard polish", "Tire shine"]
+            features: ["Clay Bar Treatment", "Wax & Polish Protection", "Leather Clean & Condition", "Engine Bay Cleaning","Headlight Restoration","Odor Removal"]
         },
         {
-            name:"Deluxe Wash",
+            name:"STANDARD DETAIL",
             prices:{
                 Hatchbac: "250br",
                 Coupe: "270br",
@@ -63,11 +63,10 @@ export default function Prices(){
                 SUV: "80min",
                 Van: "85min"
             },
-            features: ["Complete interior detail", 
-                "Exterior wash & wax", 
-                "Engine bay cleaning", 
-                "Leather conditioning", 
-                "Dust coating"]
+            features: ["Full Interior Cleaning", 
+                "Dashboard & Console Wipe", 
+                "Door Panels & Cup Holders", 
+                "Carpet & Seat Shampoo"]
         },
         {
             name: "Interior Wash",
