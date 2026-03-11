@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useState } from "react";
+import Image from "next/image";
 
 export default function Navbar() {
   const [isOpen, setisOpen] = useState(false);
@@ -9,7 +10,12 @@ export default function Navbar() {
     <nav className="bg-white shadow-2xs fixed w-full z-10">
       <div className="max-w-8xl mx-auto md:px-22 px-10 lg:px-60">
         <div className="flex justify-between h-16 items-center">
-          LOGO
+          <Image 
+          src="/logo.jpg"
+            alt="01 Image"
+            width={120}
+            height={100}
+          ></Image>
           <div className="flex-shrink-0 text-2x1 font-bold text-blue-600"></div>
           {/* Destop Menu */}
           <div className="hidden md:flex space-x-6">
